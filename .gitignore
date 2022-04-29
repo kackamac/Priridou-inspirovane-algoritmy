@@ -1,7 +1,6 @@
 __pycache__
 .vscode
 .ipynb_checkpoints
-todo/*
 *.docx
 solution*
 01_uvod/tmp_file.txt
