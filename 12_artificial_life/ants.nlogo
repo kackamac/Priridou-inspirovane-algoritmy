@@ -1,24 +1,13 @@
 breed [ants ant]
-
-
-;; reset game
 to setup
  clear-all
  set-default-shape ants "bug"
-  ;; generate new red ant in the middle
- create-ants 1
+ create-ants 2
  [
- set color red
+    set color one-of [red blue]
  set size 15
- set heading 0
- ]
- ;; generate k new ants with random position and color
- create-ants 5
- [
- set color one-of [red blue green white yellow]
- set size 15
- set heading one-of [0 90 180 270]
- setxy random-pxcor random-pxcor
+    set heading one-of [0 90 180 270]
+ setxy random-pxcor random-pycor
  ]
 end
 
@@ -34,7 +23,15 @@ to go
  ]
  forward 1
 end
- ;; hokhj
+
+;;  reate-ants 5
+;; [
+;; set color one-of [red blue green white yellow]
+;; set size 15
+;; set heading one-of [0 90 180 270]
+;; setxy random-pxcor random-pxcor
+;; ]
+;;end
 @#$#@#$#@
 GRAPHICS-WINDOW
 210
@@ -64,11 +61,11 @@ ticks
 30.0
 
 BUTTON
-208
-525
-271
-558
-clear
+106
+15
+170
+48
+Setup
 setup
 NIL
 1
@@ -81,11 +78,11 @@ NIL
 1
 
 BUTTON
-281
-525
-344
-558
-go
+107
+63
+170
+96
+Go
 go
 T
 1
@@ -161,12 +158,12 @@ Line -16777216 false 150 135 285 75
 
 bug
 true
-1
-Circle -7500403 true false 96 182 108
-Circle -7500403 true false 110 127 80
-Circle -7500403 true false 110 75 80
-Line -7500403 false 150 100 80 30
-Line -7500403 false 150 100 220 30
+0
+Circle -7500403 true true 96 182 108
+Circle -7500403 true true 110 127 80
+Circle -7500403 true true 110 75 80
+Line -7500403 true 150 100 80 30
+Line -7500403 true 150 100 220 30
 
 butterfly
 true
@@ -439,7 +436,7 @@ false
 Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
 @#$#@#$#@
-NetLogo 6.1.1
+NetLogo 6.2.0
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
