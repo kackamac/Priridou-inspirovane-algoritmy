@@ -1,14 +1,13 @@
 numpy
 pandas
 matplotlib
-gym
+gymnasium
 deap
 pydot
 graphviz
-tensorlflow
+tensorflow
 scikit-learn
 keras
-pickle
 cellpylib
 pyseagull
 pygame
